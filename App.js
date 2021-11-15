@@ -1,13 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import * as Font from 'expo-font'
+import React ,{useState}from 'react';
+import { AppLoading } from 'expo'
 import { StyleSheet, Text, View } from 'react-native';
+import RegisterStack from './routes/regiserStack';
 
-export default function App() {
+// const getFonts= async ()=> await Font.loadAsync({
+//      'lato':require("./assets/fonts/Latin-Thin.ttf"),
+//      'dosis':require('./assets/fonts/Dosis-Light.ttf')
+// })
+
+
+
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <RegisterStack/>
   );
 }
 
@@ -15,7 +22,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    minHeight:"100%",
+    justifyContent: 'space-between',
+    paddingTop:"10%",
+    padding:"5%"
   },
 });
+
+export default App
