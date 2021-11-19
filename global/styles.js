@@ -11,8 +11,32 @@ const getStarted=StyleSheet.create({
         padding:'3%',
         paddingTop:"15%",
         alignItems:'center',
-        justifyContent:'space-between'
      
+    },
+    btnContainer:{
+        width:"100%",
+        padding:"7%",
+        marginTop:"5%"
+    },
+    welcome:{
+      alignItems:"center",
+      padding:"2%",
+      marginTop:"1%",
+      
+    },
+    welcomeHeading:{
+      fontSize:23,
+      fontWeight:"bold",
+      textAlign:"center",
+      marginBottom:"4%",
+      color:"rgb(0,0,0)"
+      
+    },
+    welcomeText:{
+        fontSize:17,
+        textAlign:"center",
+        color:"#9E9E9E"
+
     },
     textContainer:{
         alignItems:'center',
@@ -73,16 +97,6 @@ const addphone=StyleSheet.create({
         paddingTop:"12%",
         paddingHorizontal:"7%"
     },
-    headerText:{
-        fontSize:20,
-        fontWeight:"bold",
-        marginBottom:10
-
-    },
-    infoText:{
-        fontSize:15,
-        color:"#9E9E9E"
-    },
     formContainer:{
         flex:1,
         width:"100%",
@@ -139,10 +153,220 @@ const addphone=StyleSheet.create({
     },
     btnContainer:{
         width:"100%",
+    },
+    modalContent:{
+        flex:1,
+        padding:"4%"
+    },
+    modalHeader:{
+        flexDirection:"row",
+        marginBottom:"5%"
+    },
+    modalSearch:{
+        flexDirection:"row",
+        width:"100%",
+        borderRadius:10,
+        minHeight:20,
+        paddingVertical:"4%",
+        paddingHorizontal:"5%",
+        borderColor:themeColor.background,
+    },
+    modalSearchIcon:{
+        marginRight:"10%",
+        width:"10%"
+    },
+    modalSearchInput:{
+        fontSize:15,
+        width:"90%"
+    },
+    countryList:{
+        flexDirection:"row",
+        justifyContent:"space-between",
+        padding:"10%",
+        width:"100%",
+        borderRadius:10,
+        backgroundColor:"#FAFAFA",
+        marginBottom:"6%"
+    },
+    countryListName:{
+        fontSize:16,
+        color:"#757575"
+    },
+    countryListCode:{
+        fontSize:15,
+        color:"#BDBDBD"
+    },
+    modalList:{
+        marginTop:26,
+        flex:1,
+        paddingHorizontal:"3%"
     }
+    
 })
 
+const componentStyles=StyleSheet.create({
+    continueBtn:{
+        width:"100%",
+        borderRadius:80,
+        padding:"6%",
+        alignItems:"center",    
+        textAlign:"center"
+
+    },
+    headerText:{
+        fontSize:20,
+        fontWeight:"bold",
+        marginBottom:10
+
+    },
+    infoText:{
+        fontSize:15,
+        color:"#9E9E9E"
+    },
+    modalContent:{
+        position:"absolute",
+        bottom:0,
+        left:0,
+        width:"100%",
+        height:"50%",
+        borderTopLeftRadius:50,
+        borderTopRightRadius:50,
+        padding:"7%",
+        marginTop:"auto",
+        backgroundColor:"#ffffff"
+    },
+    modalContainer:{
+        flex:1
+    },
+    modalHeader:{
+        alignItems:"center"
+    },
+    modalBody:{
+        marginTop:"10%",
+        marginHorizontal:"4%",
+        padding:"4%"
+    },
+    modalTitle:{
+        fontSize:19,
+        fontWeight:"bold",
+        marginBottom:"2%"
+    },
+    modalSubTitle:{
+        fontSize:15,
+        marginBottom:"1%",
+        color:"#9E9E9E"
+    },
+    modalItem:{
+        flexDirection:"row",
+        borderTopWidth:1,
+        borderTopColor:"#E0E0E0",
+        padding:"6%"
+    },
+    modalText:{
+        fontSize:15,
+        color:"#616161",
+        marginLeft:"6%"
+    },
+    overlay:{
+        flex:1,
+        backgroundColor: "rgba(52, 52, 52, 0.4)",
+        height:"100%"
+    }
+    
+})
+const verifyPhoneStyles=StyleSheet.create({
+    container:{
+        flex:1,
+        paddingTop:"12%",
+        paddingHorizontal:"7%",
+        paddingBottom:"2%"
+    },
+    formContainer:{
+        flex:1,
+        justifyContent:"space-between"
+    },
+    input:{
+        flexDirection:"row",
+        width:"100%",
+        padding:"2%"
+    },
+    digitContainer:{
+        width:"24%",
+        borderRadius:15,
+        marginHorizontal:"1%",
+        padding:"7%",
+        backgroundColor:"#FAFAFA",
+        
+    },
+    digit:{
+        fontSize:30
+    },
+    resendCode:{
+        padding:"4%",
+        marginBottom:"5%"
+    },
+    didntRecieveCode:{
+        padding:"4%",
+        marginTop:"2%"
+    },
+    resendCodeText:{
+        color:"#BDBDBD",
+        fontSize:13
+    }
+})
+const createProfileStyles=StyleSheet.create({
+   signUpMethods:{
+       alignItems:"center",
+       marginVertical:"3%",
+       width:"100%"
+   },
+   signUpMethodsBtn:{
+    alignItems:"center",
+    marginVertical:"3%",
+    width:"100%"
+},
+   container:{
+       flex:1,
+       paddingTop:"10%",
+       paddingHorizontal:"7%"
+   } ,
+   title:{
+       fontSize:40,
+       fontWeight:"bold"
+   },
+   titleContainer:{
+   },
+   userInput:{
+       margin:"4%",
+       marginVertical:"10%"
+   },
+   inputField:{
+     flexDirection:"row",
+     marginVertical:"4%",
+     width:"100%",
+     padding:"4%",
+     borderRadius:15,
+     backgroundColor:"#E0E0E0",
+   },
+   textInput:{
+    color:"#9E9E9E",
+    width:"80%"
+   },
+   submitButton:{
+       marginTop:"5%"
+   },
+   form:{
+       flex:1,
+       justifyContent:"space-between",
+       paddingBottom:"3%",
+       width:"100%"
+   }
+})
 export {
     getStarted,
-    addphone
+    addphone,
+    componentStyles,
+    verifyPhoneStyles,
+    themeColor,
+    createProfileStyles
 }

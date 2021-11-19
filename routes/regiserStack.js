@@ -15,7 +15,7 @@ export default function RegisterStack(){
     return(
         <NavigationContainer>
             <Stack.Navigator 
-            initialRouteName="AddPhoneNumber"
+            initialRouteName="GetStarted"
             >
               <Stack.Screen
                name="GetStarted"
@@ -33,9 +33,29 @@ export default function RegisterStack(){
                     headerShown:false
                  }}
                />
-              <Stack.Screen name="VerifyPhone" component={VerifyPhoneScreen} />
-              <Stack.Screen name="SetUpProfile" component={SetUpProfileScreen} />
-              <Stack.Screen name="AddCardDetails" component={CardDetailsScreen} />   
+              <Stack.Screen 
+              name="VerifyPhone"
+               options={
+                {
+                   headerShown:false
+                }}
+              component={VerifyPhoneScreen} 
+              />
+              <Stack.Screen 
+              name="SetUpProfile" 
+              component={SetUpProfileScreen} 
+              options={
+                {
+                   headerShown:false
+                }}/>
+              <Stack.Screen
+               name="AddCardDetails"
+               component={CardDetailsScreen} 
+               options={
+                {
+                   headerShown:false
+                }}
+               />   
             </Stack.Navigator>
         </NavigationContainer>
     )

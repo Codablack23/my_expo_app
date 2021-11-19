@@ -2,31 +2,44 @@ import React from 'react'
 import { View, Text, StyleSheet,TextInput,TouchableWithoutFeedback,Image} from 'react-native'
 import { AntDesign } from '@expo/vector-icons'; 
 import SvgComponent from '../global/svg'
-import {getStarted as styles} from '../global/styles'
+import {getStarted as styles, themeColor} from '../global/styles'
+import Button from '../components/button';
+import {delivery} from '../global/svgfille'
 
-function GetStarted(){
+function GetStarted({navigation}){
     return(
         <View style={styles.container}>
-             <View style={styles.welcome}>
-               <View style={styles.textContainer}>
-                 <Text style={styles.text}>Welcome To Lets Go Taxi</Text>
-               </View>
-                <View style={styles.imageContainer}>
-                   <SvgComponent/>           
-                </View>
-            </View>
             <View>
-            <View style={styles.inputContainer}>
-                 <View style={styles.inputText}>
-                     <Text style={{color:'#ffffff',fontSize:18}}>Get Started</Text>
-                 </View>
-              <TouchableWithoutFeedback onPress={()=>{console.log("button clicked")}}>
-                 <View style={styles.go}>
-                 <AntDesign name="right" size={24} color="#6c63ff" />
-                 </View>
-              </TouchableWithoutFeedback>
-             </View>
+                <SvgComponent
+                svg={delivery}
+                height={250}
+                width={250}
+                />
             </View>
+           <View style={styles.welcome}>
+               <Text style={styles.welcomeHeading}>
+                   Welcome To Transport It
+               </Text>
+               <Text style={styles.welcomeText}>
+                  Lorem Ipsum laore lvida Local To the World Because og the Good Inovation Made By The Users
+               </Text>
+           </View>
+           <View style={styles.btnContainer}>
+               <Button 
+                btnTheme={{
+                    background:"#ffffff",
+                    text:"#212121"
+                }}
+                text={"Continue As Dispatch Rider"}
+               />
+             <View style={{marginTop:"4%"}}>
+             <Button 
+                navigation={navigation}
+                to="AddPhoneNumber"
+                text={"Continue As A User"}
+               />
+             </View>
+           </View>
         </View>
 
     )
