@@ -1,9 +1,12 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import * as Font from 'expo-font'
 import React ,{useState}from 'react';
 import { AppLoading } from 'expo'
 import { StyleSheet, Text, View } from 'react-native';
 import RegisterStack from './routes/regiserStack';
+import HomeStack from './routes/homeStack';
+
 
 // const getFonts= async ()=> await Font.loadAsync({
 //      'lato':require("./assets/fonts/Latin-Thin.ttf"),
@@ -13,8 +16,11 @@ import RegisterStack from './routes/regiserStack';
 
 
 function App() {
+  const [isAuthenticted,setIsAuthenticated]=useState(false)
   return (
-    <RegisterStack/>
+    isAuthenticted?  <RegisterStack/>:
+      <HomeStack/>
+  
   );
 }
 
