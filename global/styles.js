@@ -362,6 +362,7 @@ const createProfileStyles=StyleSheet.create({
        width:"100%"
    }
 })
+
 export {
     getStarted,
     addphone,

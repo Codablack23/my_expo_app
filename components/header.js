@@ -20,8 +20,10 @@ export default function Header({title,subtitle,back}){
       <Text style={{marginRight:"10%"}}> <AntDesign name="arrowleft" size={30} color="black" /></Text>
       </View>
     </TouchableWithoutFeedback>
+    <View style={{marginTop:"5%",marginLeft:"2%"}}>
     <Text style={styles.headerText}>{title}</Text>
     <Text style={styles.infoText}>{subtitle}</Text>
+    </View>
   </View>
   )
 }

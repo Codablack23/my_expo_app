@@ -16,7 +16,7 @@ export default function HomeScreen({navigation}) {
        />
        <View style={styles.drawerMenu}>
          <TouchableWithoutFeedback onPress={()=>{navigation.openDrawer()}}>
-             <Text style={styles.menuIcon}><Ionicons name="menu-outline" size={24} color="black" /></Text>
+             <Text style={styles.menuIcon}><Ionicons name="menu-outline" size={24} color={'#757575'} /></Text>
          </TouchableWithoutFeedback>
        </View>
       <MapView style={styles.map}
@@ -27,7 +27,7 @@ export default function HomeScreen({navigation}) {
        <View style={{width:"100%"}}>
        <TouchableWithoutFeedback onPress={()=>{setModalShown(true)}}>
            <View style={styles.orderButton}>
-            <Text style={{color:"#9E9E9E"}}>Request A Dispatch</Text>
+            <Text style={{color:"#757575"}}>Request A Dispatch</Text>
            </View>
         </TouchableWithoutFeedback>
        </View>

@@ -20,7 +20,7 @@ function App() {
   return (
     isAuthenticted?  <RegisterStack/>:
       <HomeStack/>
-  
+      
   );
 }
 

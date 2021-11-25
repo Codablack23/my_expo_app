@@ -6,10 +6,13 @@ import PhoneModal from '../components/phoneModal'
 import Header from '../components/header'
 
 
-export default function Button({text,btnTheme,navigation,to,icons}){
+export default function Button({text,btnTheme,navigation,to,icons,eventFunction}){
   const setAction=()=>{
        if(navigation){
          navigation.navigate(to)
+       }
+       if(eventFunction){
+         eventFunction()
        }
        console.log("No Navigation Provided")
   }
